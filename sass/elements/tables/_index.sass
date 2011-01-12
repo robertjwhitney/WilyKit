@@ -1,0 +1,29 @@
+@import _variables.sass
+@import _mixins.sass
+
+table
+  :border-bottom = $table_border
+  :border-left = $table_border
+  caption
+    :margin-bottom 10px
+  th
+    :background = $darkest
+    :color = $lightest
+    :padding = $cell_padding
+  td
+    :border-top = $table_border
+    :border-right = $table_border
+    :padding = $cell_padding
+  //only css3
+  &.alternating
+    tr:nth-child(even)
+      :background = $alternating_table_color      
+  //content administration table
+  &.content
+    :border none
+    :width 100%
+    th
+      :background none
+      :border-bottom = "1px solid" $border
+    td
+      :border 0

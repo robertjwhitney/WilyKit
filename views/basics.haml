@@ -1,0 +1,375 @@
+!!!
+%html{:xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en", :lang=>"en"}
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    %title WilyKit
+    %link{:title=>"Home", :type=>"text/html", :href=>"/"}
+    %link{:title=>"Baisics", :type=>"text/html", :href=>"/basics"}
+    %link{:title=>"Source", :type=>"text/html", :href=>"/https://github.com/robertjwhitney/wilykit"}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/stylesheets/style.css", :media=>"screen"}
+  %body
+    #flashMessage.alert
+      .message
+        This is a flash message with the "alert" class.  JQuery will fade this out over 10 seconds.
+    #wrapper
+      #top-bar
+        #top-bar-inner
+          #logo
+            %a{:href=>"/", :title=>"Home"}
+              WilyKit
+          #nav
+            %a{:href=>"/", :title=>"Site Root"} Home
+            %a{:href=>"/basics", :title=>"WilyKit Basic Implementation"} Basics
+            %a{:href=>"https://github.com/robertjwhitney/wilykit", :title=>"Get the source code on Github"} Source
+          #tabs
+            #primary-nav
+              %ul
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Link
+                %li.active
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Active
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Link
+            #secondary-nav
+              %ul
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Profile
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Settings
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Logout
+      #content
+        #main
+          .box
+            .top
+              Forms
+            .content
+              %form
+                %fieldset
+                  %p
+                    %label
+                      User Name
+                    %input{:type=>"text"}
+                    .errorMessage
+                      %p
+                        User name is required.
+                  %p
+                    %label
+                      Password
+                    %input{:type=>"password"}
+                    .errorMessage
+                      %p
+                        Passwords do not match.
+                  %p
+                    %label
+                      Text Area
+                    %textarea{:rows=>"5"}
+                    .errorMessage
+                      %p
+                        Text Area is required.
+                  %p
+                    %span.checkbox
+                      %input{:type=>"checkbox"}
+                    %span.label
+                      %label
+                        I agree
+                      .errorMessage
+                        %p
+                          You must agree to terms in order to proceed.
+                  %p
+                    %span.radio
+                      %input{:type=>"radio", :name=>"group_name"}
+                    %span.label
+                      %label
+                        This One
+                  %p
+                    %span.radio
+                      %input{:type=>"radio", :name=>"group_name"}
+                    %span.label
+                      %label
+                        This One
+                  %p
+                    %span.select
+                      %select
+                        %option{:value=>"1"}
+                          Option 1
+                        %option{:value=>"2"}
+                          Option 2
+                  %p
+                    %span.file
+                      %input{:type=>"file"}
+                      .errorMessage
+                        %p
+                          Please select a file
+                  %p
+                    %span.submit
+                      %input{:type=>"submit", :value=>"Submit"}
+                      or
+                      %a{:href=>"#"}
+                        clear
+                        //forms with errors
+          .box
+            .top
+              Forms w/errors
+            .content
+              %p Shows what form inputs look like after throwing rails default errors.  The field specific messages in red text are revealed via jquery when the field blocks are built as specified.
+              #errorExplanation
+                %h2 5 errors prohibited this post from being saved
+                %p
+                  There were problems with the following fields:
+                %ul
+                  %li
+                    User Name can't be blank
+                  %li
+                    Password can't be blank
+                  %li
+                    Text Area can't be blank
+                  %li
+                    Agreement must be accepted
+                  %li
+                    File can't be blank
+              %form
+                %fieldset
+                  %p
+                    .fieldWithErrors 
+                      %label
+                        User Name
+                    .fieldWithErrors  
+                      %input{:type=>"text"}
+                    .errorMessage
+                      %p
+                        User name is required
+                  %p
+                    .fieldWithErrors 
+                      %label  
+                        Password
+                    .fieldWithErrors 
+                      %input{:type=>"password"}
+                    .errorMessage
+                      %p
+                        Incorrect password
+                  %p
+                    .fieldWithErrors 
+                      %label
+                        Text Area
+                    .fieldWithErrors 
+                      %textarea{:rows=>"5"}
+                    .errorMessage
+                      %p
+                        Text area is required
+                  %p
+                    %span.checkbox
+                      .fieldWithErrors 
+                        %input{:type=>"checkbox", :class=>"check"}
+                    %span.label
+                      .fieldWithErrors 
+                        %label 
+                          I agree
+                      .errorMessage
+                        %p
+                          You must agree to terms and conditions
+                  %p
+                    %span.file
+                      .fieldWithErrors 
+                        %input{:type=>"file"}
+                      .errorMessage
+                        %p
+                          Please choose a file to upload
+              %p
+                %br
+                  %span.submit
+                    %input.submit{:type=>"submit", :value=>"Submit"}
+                    or
+                    %a{:href=>"#"}
+                      clear
+          .box     
+            .top
+              Content Table
+            .content
+              %table.content.alternating{:summary=>"This is an example of a table that could be used for content administration", :title=>"Content Table Example"}
+                %th
+                  %input{:type=>"checkbox"}
+                %th Column 1
+                %th Column 2
+                %th Column 3
+                %th Column 4
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings
+                %tr
+                  %td
+                    %input{:type=>"checkbox"}
+                  %td Lorem ipsum dolor
+                  %td 
+                    %a{:href=>"#"} 
+                      Sit arnet
+                  %td Consectetur adipiscing
+                  %td
+                    %a{:href=>"#"}
+                      edit
+                    %a{:href=>"#"}
+                      delete
+                    %a{:href=>"#"}
+                      settings                    
+              .actions.submit
+                %select
+                  %option{:value=>"0"}
+                    Choose an action...
+                  %option{:value=>"1"}
+                    Edit
+                  %option{:value=>"2"}
+                    Delete
+                %input{:type=>"submit", :value=>"Apply to selected"}
+                .paginate
+                  .pagination
+                    %span.disabled.prev_page
+                      &laquo; Previous 
+                    %span.current
+                      1 
+                    %a{:href=>"#", :rel=>"next"}
+                      2
+                    %a{:href=>"#", :rel=>"next"}
+                      3
+                    %a{:href=>"#", :rel=>"next"}
+                      4
+                    %a{:href=>"#", :class=>"next_page", :rel=>"next"}
+                      Next &raquo;
+          .box
+            .top
+              Data table
+            .content
+              %table.data.alternating{:summary=>"This is an example of what a table would look like, which is borrowed from the HTML4 Spec.", :title=>"Cups of Coffee consumed by each senator"}
+                %caption Cups of coffee consumed by Senators
+                %thead
+                  %th Name
+                  %th Cups
+                  %th Type of Coffee
+                  %th Sugar?
+                %tr.even
+                  %td T. Sexton
+                  %td 10
+                  %td Espresso
+                  %td No
+                %tr
+                  %td J. Dinnen
+                  %td 5
+                  %td Decaf
+                  %td Yes
+              %a{:href=>"#", :title=>"This is a link to nowhere"}
+                Link
+        #sidebar
+          .box
+            .top
+              Sidebar
+            .content
+              %p
+                The position of the sidebar and the main content area can be switched left and right by simply placing them before or after each other in your document.
+                  
+        
+            

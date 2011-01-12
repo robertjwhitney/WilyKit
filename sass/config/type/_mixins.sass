@@ -1,0 +1,17 @@
+=typeSerif
+  font-family: "Georgia", "Times New Roman", serif
+  
+=typeSans
+  font-family: "Verdana", sans-serif
+  
+=baseLine
+  :margin = $baseLine 0
+  
+=header($fontSize)
+  :font-size = $fontSize
+  @if $fontSize > $baseLine
+    :line-height = ($baseLine/($fontSize*0.5))
+    :margin = ($baseLine/$fontSize) + "em" 0
+  @else
+    :line-height = ($baseLine/$fontSize)
+    :margin = (($baseLine/$fontSize) + "em") 0

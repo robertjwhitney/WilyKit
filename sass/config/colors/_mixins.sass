@@ -1,0 +1,11 @@
+=flash($flashColor, $flashImage)
+  background = $flashColor
+  border-color = $flashColor - #666
+  #close
+    background = $flashColor - #666
+    border-color = $flashColor - #999
+    color = $flashColor - #999
+    &:hover
+      background = $flashColor
+  .message
+    background = "url('/images/icons/" + $flashImage + ".png') no-repeat center left"

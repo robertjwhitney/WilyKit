@@ -1,0 +1,45 @@
+@import _variables.sass
+@import _mixins.sass
+
+body
+  +typeSans
+  font-size = $baseFontSize
+  line-height = $baseLine
+  
+h1
+  +header(36px)
+  letter-spacing: 1px
+  
+h2
+  +header(24px)
+  text-transform: uppercase
+  letter-spacing: 3px
+  
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    
+p, dl, hr, ol, ul, pre, table, address, fieldset
+  +baseLine
+  
+th
+  font-size = $baseFontSize * 1.5
+  font-weight: bold
+
+ul
+  list-style-type: circle
+  margin = $baseLine/2 0 $baseLine/2
+  margin-left: 15px
+  li
+    line-height = $baseLine
+    margin = $baseLine/2 0
+    
+#logo
+  font-size: 48px
+  
+#primary-nav
+  font-size: 18px
+  
+#secondary-nav
+  font-size: 12px

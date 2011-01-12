@@ -1,0 +1,39 @@
+@import _variables.sass
+@import _mixins.sass
+
+form
+  fieldset
+    label
+      +formLabel
+    input
+      :border = "1px solid" #bbb
+      :height 15px
+      :padding 5px
+      :width 98%
+      &:focus
+        :background #FFFBE2
+    textarea
+      :border = "1px solid" #bbb
+      :width 100%
+      &:focus
+        :background #FFFBE2
+    .checkbox
+      label
+        :float left
+      input
+        :border 0
+        :float left
+        :width 25px
+    .radio
+      label
+        :float left
+      input
+        :border 0
+        :float left
+        :width 25px
+    .file
+      :margin 10px 0
+      input
+        :border 0
+        :*border 1px solid #ccc
+        :height 25px
