@@ -2,4 +2,20 @@
 @import _mixins.sass
 
 body
-  background = $background
+  background = $lighter
+  
+#top-bar
+  background = $lighter - #111
+  border-color: #fff
+  #tabs
+    background = $light
+    #primary-nav
+      li
+        &:hover, &.active
+          background = $lighter
+          
+.box
+  .top
+    background = $lighter - #111
+  .content
+    background: #fff

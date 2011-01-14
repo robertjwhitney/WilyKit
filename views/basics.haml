@@ -9,11 +9,11 @@
     %link{:title=>"Source", :type=>"text/html", :href=>"/https://github.com/robertjwhitney/wilykit"}
     %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/stylesheets/style.css", :media=>"screen"}
   %body
-    #flashMessage.alert
+    -#flashMessage.alert
       .message
         This is a flash message with the "alert" class.  JQuery will fade this out over 10 seconds.
     #wrapper
-      #top-bar
+      #top-bar.tabs
         #top-bar-inner
           #logo
             %a{:href=>"/", :title=>"Home"}
@@ -50,7 +50,8 @@
         #main
           .box
             .top
-              Forms
+              %h3
+                Forms
             .content
               %form
                 %fieldset
@@ -118,7 +119,8 @@
                         //forms with errors
           .box
             .top
-              Forms w/errors
+              %h3
+                Forms w/errors
             .content
               %p Shows what form inputs look like after throwing rails default errors.  The field specific messages in red text are revealed via jquery when the field blocks are built as specified.
               #errorExplanation
@@ -192,7 +194,8 @@
                       clear
           .box     
             .top
-              Content Table
+              %h3
+                Content Table
             .content
               %table.content.alternating{:summary=>"This is an example of a table that could be used for content administration", :title=>"Content Table Example"}
                 %th
@@ -346,7 +349,8 @@
                       Next &raquo;
           .box
             .top
-              Data table
+              %h3
+                Data table
             .content
               %table.data.alternating{:summary=>"This is an example of what a table would look like, which is borrowed from the HTML4 Spec.", :title=>"Cups of Coffee consumed by each senator"}
                 %caption Cups of coffee consumed by Senators
@@ -370,7 +374,8 @@
         #sidebar
           .box
             .top
-              Sidebar
+              %h3
+                Sidebar
             .content
               %p
                 The position of the sidebar and the main content area can be switched left and right by simply placing them before or after each other in your document.
