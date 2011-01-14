@@ -3,8 +3,7 @@
 #wrapper
   width: 100%
   #top-bar
-    border-style: solid
-    border-width: 1px
+    +border(1px)
     height: 80px
     margin-bottom: 30px
     padding-top: 5px
@@ -69,8 +68,11 @@
 .box
   +baseLine
   .top
+    +border(1px)
+    border-bottom-width: 2px
     padding: 10px
   .content
+    +border(1px)
     padding: 10px
   
 .actions
