@@ -1,0 +1,51 @@
+!!!
+%html{:xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en", :lang=>"en"}
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    %title WilyKit
+    %link{:rel=>"shortcut icon", :href=>"favicon.ico"}/
+    %link{:title=>"Home", :type=>"text/html", :href=>"/"}
+    %link{:title=>"Baisics", :type=>"text/html", :href=>"/basics"}
+    %link{:title=>"Source", :type=>"text/html", :href=>"/https://github.com/robertjwhitney/wilykit"}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/stylesheets/style.css", :media=>"screen"}
+  %body
+    -#flashMessage.alert
+      .message
+        This is a flash message with the "alert" class.  JQuery will fade this out over 10 seconds.
+    #wrapper
+      #top-bar.tabs
+        #top-bar-inner
+          #logo
+            %a{:href=>"/", :title=>"Home"}
+              WilyKit
+          #nav
+            %a{:href=>"/", :title=>"Site Root"} Home
+            %a{:href=>"/basics", :title=>"WilyKit Basic Implementation"} Basics
+            %a{:href=>"/advanced", :title=>"WilyKit Basic Implementation"} Advanced
+            %a{:href=>"https://github.com/robertjwhitney/wilykit", :title=>"Get the source code on Github"} Source
+          #tabs
+            #primary-nav
+              %ul
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Link
+                %li.active
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Active
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Link
+            #secondary-nav
+              %ul
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Profile
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Settings
+                %li
+                  %a{:href=>"#", :title=>"Example Link"}
+                    Logout
+      .clearfix
+      #content
+        = yield
